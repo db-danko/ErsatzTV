@@ -111,6 +111,7 @@ public class Program
                                     {
                                         o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
                                         o.MigrationsAssembly("ErsatzTV.Infrastructure.MySql");
+                                        o.CommandTimeout(60);  // Add 60 second timeout
                                     }
                                 );
                             }
