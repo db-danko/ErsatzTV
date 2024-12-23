@@ -77,8 +77,8 @@ jobs:
           build-args: |
             INFO_VERSION=${{ inputs.info_version }}-docker${{ matrix.suffix }}
           tags: |
-            jasongdove/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
-            jasongdove/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
         if: ${{ matrix.name != 'arm64' && matrix.name != 'arm32v7' }}
 
       - name: Build and push
@@ -92,8 +92,8 @@ jobs:
           build-args: |
             INFO_VERSION=${{ inputs.info_version }}-docker${{ matrix.suffix }}
           tags: |
-            jasongdove/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
-            jasongdove/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
         if: ${{ matrix.name == 'arm64' }}
 
       - name: Build and push
@@ -107,6 +107,6 @@ jobs:
           build-args: |
             INFO_VERSION=${{ inputs.info_version }}-docker${{ matrix.suffix }}
           tags: |
-            jasongdove/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
-            jasongdove/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.base_version }}${{ matrix.suffix }}
+            db-danko/ersatztv:${{ inputs.tag_version }}${{ matrix.suffix }}
         if: ${{ matrix.name == 'arm32v7' }}
