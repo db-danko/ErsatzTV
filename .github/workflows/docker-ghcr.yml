@@ -14,9 +14,6 @@ on:
         description: 'Docker tag version (e.g. v0.3.7)'
         required: true
         type: string
-    secrets:
-      github_token:
-        required: true  # Secret for GHCR authentication
 
 jobs:
   build_and_push:
@@ -64,7 +61,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: ${{ github.actor }}
-          password: ${{ secrets.github_token }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v5
